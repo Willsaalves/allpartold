@@ -6,14 +6,20 @@ const GLITCH_CHARS = "01アイウエオ∑∆Ωβ#@%&";
 const randChar = () => GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)];
 
 export function Hero() {
-  const [tick, setTick] = useState(0);
+  const [yearDisplay, setYearDisplay] = useState("2026");
 
   useEffect(() => {
-    const id = setInterval(() => setTick((t) => t + 1), 80);
+    let tick = 0;
+    const id = setInterval(() => {
+      tick += 1;
+      setYearDisplay(
+        tick % 40 < 3
+          ? randChar() + randChar() + randChar() + randChar()
+          : "2026"
+      );
+    }, 80);
     return () => clearInterval(id);
   }, []);
-
-  const isGlitching = tick % 40 < 3;
 
   return (
     <section
@@ -66,7 +72,7 @@ export function Hero() {
           IPD<span className="text-pink [text-shadow:0_0_40px_rgba(203,22,150,0.5)]">CON</span>
           <br />
           <span className="block text-[0.28em] font-bold font-mono text-gold tracking-[0.15em] mt-2">
-            {isGlitching ? randChar() + randChar() + randChar() + randChar() : "2026"}
+            {yearDisplay}
           </span>
         </h1>
 
