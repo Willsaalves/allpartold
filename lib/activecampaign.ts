@@ -16,7 +16,7 @@ export async function syncContactToActiveCampaign(input: ActiveCampaignInput): P
   const apiKey = process.env.ACTIVECAMPAIGN_API_KEY;
   const listId = process.env.ACTIVECAMPAIGN_LIST_ID;
 
-  if (!baseUrl || !apiKey || !listId) {
+  if (!baseUrl || !apiKey) {
     throw new Error("Variáveis de ambiente do ActiveCampaign não configuradas");
   }
 
@@ -47,6 +47,12 @@ export async function syncContactToActiveCampaign(input: ActiveCampaignInput): P
 
   if (!contactId) {
     throw new Error("ActiveCampaign contact/sync não retornou um id de contato");
+  }
+
+  if (!listId) {
+    // Lista ainda não configurada: contato já foi criado/atualizado no
+    // ActiveCampaign, só não é associado a nenhuma lista por enquanto.
+    return;
   }
 
   const listRes = await fetch(`${baseUrl}/api/3/contactLists`, {

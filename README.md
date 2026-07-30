@@ -28,7 +28,7 @@ Veja `.env.example`. Nunca commitar valores reais.
 | `DATABASE_URL` | Connection string do Postgres (Vercel Postgres, Neon, Supabase...) |
 | `ACTIVECAMPAIGN_URL` | URL base da conta ActiveCampaign, ex: `https://sua-conta.api-us1.com` |
 | `ACTIVECAMPAIGN_API_KEY` | API Token da conta (Settings → Developer) |
-| `ACTIVECAMPAIGN_LIST_ID` | ID da lista do ActiveCampaign para associar os cadastros do evento |
+| `ACTIVECAMPAIGN_LIST_ID` | *(opcional)* ID da lista do ActiveCampaign para associar os cadastros do evento. Sem ela, o contato ainda é criado/atualizado no ActiveCampaign, só não entra em nenhuma lista até essa variável ser configurada. |
 | `NEXT_PUBLIC_SITE_URL` | URL pública final do site, usada em metadata/OG/sitemap/robots |
 
 ## Fluxo de cadastro (`/api/cadastro`)
