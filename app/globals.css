@@ -18,12 +18,12 @@ body {
   background: #080810;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cb1696;
+  background: #9341ec;
   border-radius: 2px;
 }
 
 .pink-text {
-  background: linear-gradient(135deg, #cb1696 0%, #e030b0 100%);
+  background: linear-gradient(135deg, #9341ec 0%, #e030b0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -37,7 +37,7 @@ body {
 }
 
 .tech-text {
-  background: linear-gradient(135deg, #cb1696 0%, #6d04d7 60%, #cb1696 100%);
+  background: linear-gradient(135deg, #9341ec 0%, #6d04d7 60%, #9341ec 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,8 +46,8 @@ body {
 input:focus,
 select:focus {
   outline: none;
-  border-color: #cb1696 !important;
-  box-shadow: 0 0 0 2px rgba(203, 22, 150, 0.15);
+  border-color: #9341ec !important;
+  box-shadow: 0 0 0 2px rgba(147, 65, 236, 0.15);
 }
 
 .mono-label {

@@ -6,8 +6,8 @@ const FLOORS = [
   {
     icon: IconMic,
     floor: "01 / térreo",
-    title: "Conteúdo & Palestras",
-    desc: "Painéis e keynotes para todos os públicos — líderes educacionais, assessorias, gestores corporativos e parceiros estratégicos.",
+    title: "Conteúdo & Espetáculo Interativo",
+    desc: "Coquetel de boas-vindas, Innova Show realizado pela Treme Terra, conteúdo e apresentação de tendências para o mercado de eventos e formaturas.",
     accent: "pink" as const,
   },
   {
@@ -36,7 +36,7 @@ export function Estrutura() {
               key={floor}
               className={`bg-card rounded-[4px] p-12 transition-all duration-300 hover:-translate-y-[5px] ${
                 accent === "pink"
-                  ? "border border-pink-border border-t-2 border-t-pink hover:shadow-[0_20px_60px_rgba(203,22,150,0.15)]"
+                  ? "border border-pink-border border-t-2 border-t-pink hover:shadow-[0_20px_60px_rgba(147,65,236,0.15)]"
                   : "border border-gold-border border-t-2 border-t-gold hover:shadow-[0_20px_60px_rgba(212,175,55,0.1)]"
               }`}
             >

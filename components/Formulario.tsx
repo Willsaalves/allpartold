@@ -15,8 +15,7 @@ const SEGMENTOS = [
 
 const BENEFITS = [
   "Ingresso para todos os painéis",
-  "Jantar e open bar incluso",
-  "Certificado de participação",
+  "Coquetel Finger Food e open bar incluso",
   "Acesso ao networking exclusivo",
 ];
 
@@ -244,7 +243,7 @@ export function Formulario() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full bg-[linear-gradient(135deg,#cb1696_0%,#e030b0_50%,#cb1696_100%)] text-white border-none px-4 py-[1.1rem] rounded-[3px] font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase cursor-pointer transition-all shadow-[0_4px_24px_rgba(203,22,150,0.4)] hover:opacity-90 hover:-translate-y-px disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0"
+            className="w-full bg-[linear-gradient(135deg,#9341ec_0%,#e030b0_50%,#9341ec_100%)] text-white border-none px-4 py-[1.1rem] rounded-[3px] font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase cursor-pointer transition-all shadow-[0_4px_24px_rgba(147,65,236,0.4)] hover:opacity-90 hover:-translate-y-px disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0"
           >
             {status === "submitting" ? "Enviando..." : "Inscrever-se agora"}
           </button>

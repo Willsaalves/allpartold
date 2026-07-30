@@ -21,7 +21,7 @@ export function Lancamento() {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(203,22,150,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(203,22,150,0.18) 1px, transparent 1px)",
+            "linear-gradient(rgba(147,65,236,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(147,65,236,0.18) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
@@ -41,19 +41,19 @@ export function Lancamento() {
 
       <div className="relative max-w-content mx-auto text-center">
         <div className="inline-flex items-center gap-[0.6rem] bg-pink-dim border border-pink-border px-5 py-[0.45rem] rounded-sm mb-10">
-          <span className="text-pink">
+          <span className="text-gold">
             <IconRocket />
           </span>
-          <MonoLabel>lançamento_em_primeira_mão</MonoLabel>
+          <MonoLabel className="text-gold">lançamento_em_primeira_mão</MonoLabel>
         </div>
 
         <h2 className="font-montserrat font-black text-[clamp(2rem,5vw,4rem)] leading-[1.02] mb-3 text-white">
           Franquias All Party
         </h2>
 
-        <h3 className="font-mono font-medium text-[clamp(1rem,2.5vw,1.5rem)] mb-10 text-gold tracking-[0.08em]">
-          — Modelo SMART —
-        </h3>
+        <div className="font-mono font-medium text-[clamp(1rem,2.5vw,1.5rem)] mb-10 tracking-[0.08em]" aria-hidden="true">
+          &nbsp;
+        </div>
 
         <p className="text-gray text-[clamp(0.95rem,1.6vw,1.1rem)] leading-[1.9] max-w-[660px] mx-auto mb-16 font-light">
           A partir de <strong className="text-gold font-semibold">2028</strong>, qualquer pessoa poderá
@@ -72,7 +72,7 @@ export function Lancamento() {
               }`}
             >
               <div className="font-montserrat font-extrabold text-[2rem] text-pink mb-1">{value}</div>
-              <MonoLabel className="text-muted">{label}</MonoLabel>
+              <MonoLabel className="text-white">{label}</MonoLabel>
             </div>
           ))}
         </div>

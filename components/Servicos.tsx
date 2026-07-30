@@ -4,8 +4,8 @@ import { SectionLabel } from "./MonoLabel";
 const ITEMS = [
   {
     icon: IconDinner,
-    title: "Jantar & Open Bar",
-    desc: "Experiência gastronômica completa incluída na inscrição",
+    title: "Coquetel Finger Food",
+    desc: "Experiência gastronômica e open bar incluído na inscrição",
   },
   {
     icon: IconUsers,

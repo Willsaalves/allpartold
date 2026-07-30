@@ -16,7 +16,7 @@ export function Footer() {
           <div>
             <div className="font-montserrat font-black text-[1.4rem] mb-3 tracking-[0.04em]">
               <span className="text-white">IPD</span>
-              <span className="text-pink">CON</span>
+              <span className="text-purple">CON</span>
               <span className="font-mono text-muted text-[0.65rem] ml-2 font-normal">_2026</span>
             </div>
             <p className="text-muted text-[0.83rem] leading-[1.75] m-0">

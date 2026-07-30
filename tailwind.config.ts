@@ -6,9 +6,9 @@ const config: Config = {
     extend: {
       colors: {
         pink: {
-          DEFAULT: "#cb1696",
-          dim: "rgba(203,22,150,0.18)",
-          border: "rgba(203,22,150,0.35)",
+          DEFAULT: "#9341ec",
+          dim: "rgba(147,65,236,0.18)",
+          border: "rgba(147,65,236,0.35)",
         },
         purple: {
           DEFAULT: "#6d04d7",
@@ -23,7 +23,7 @@ const config: Config = {
         surface: "#0d0d18",
         card: {
           DEFAULT: "#10101e",
-          border: "rgba(203,22,150,0.15)",
+          border: "rgba(147,65,236,0.15)",
         },
         gray: {
           DEFAULT: "#b0b0c8",

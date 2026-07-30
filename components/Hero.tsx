@@ -44,32 +44,32 @@ export function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 50% at 50% 80%, rgba(203,22,150,0.2) 0%, transparent 70%)",
+            "radial-gradient(ellipse 70% 50% at 50% 80%, rgba(147,65,236,0.2) 0%, transparent 70%)",
         }}
       />
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(203,22,150,0.12) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(147,65,236,0.12) 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
       <div
         className="absolute left-0 right-0 h-px opacity-40"
         style={{
-          background: "linear-gradient(90deg, transparent, #cb1696, transparent)",
+          background: "linear-gradient(90deg, transparent, #9341ec, transparent)",
           top: "45%",
         }}
       />
 
       <div className="relative text-center px-8 pt-36 pb-16 max-w-[960px] w-full">
-        <div className="inline-flex items-center gap-2 bg-[rgba(203,22,150,0.08)] border border-pink-border px-[1.1rem] py-[0.38rem] rounded-sm mb-8">
-          <span className="w-[5px] h-[5px] rounded-full bg-pink shadow-[0_0_8px_#cb1696]" />
-          <span className="mono-label text-pink">4ª Edição · 15.08.2026 · São Paulo</span>
+        <div className="inline-flex items-center gap-2 bg-[rgba(147,65,236,0.08)] border border-pink-border px-[1.1rem] py-[0.38rem] rounded-sm mb-8">
+          <span className="w-[5px] h-[5px] rounded-full bg-pink shadow-[0_0_8px_#9341ec]" />
+          <span className="mono-label text-gold">4ª Edição · 15.08.2026 · São Paulo</span>
         </div>
 
         <h1 className="font-montserrat font-black text-[clamp(4.5rem,14vw,10rem)] leading-[0.9] tracking-[-0.03em] mb-7 text-white">
-          IPD<span className="text-pink [text-shadow:0_0_40px_rgba(203,22,150,0.5)]">CON</span>
+          IPD<span className="text-purple [text-shadow:0_0_40px_rgba(109,4,215,0.5)]">CON</span>
           <br />
           <span className="block text-[0.28em] font-bold font-mono text-gold tracking-[0.15em] mt-2">
             {yearDisplay}
@@ -99,7 +99,7 @@ export function Hero() {
 
         <div className="mt-20 flex flex-col items-center gap-2 opacity-40">
           <span className="mono-label text-muted">scroll</span>
-          <div className="w-px h-9 bg-[linear-gradient(180deg,#cb1696,transparent)]" />
+          <div className="w-px h-9 bg-[linear-gradient(180deg,#9341ec,transparent)]" />
         </div>
       </div>
     </section>

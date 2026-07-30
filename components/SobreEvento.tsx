@@ -16,12 +16,12 @@ export function SobreEvento() {
               única e transformadora
             </span>
           </h2>
-          <p className="text-gray text-[0.97rem] leading-[1.9] mb-5 font-light">
+          <p className="text-white text-[0.97rem] leading-[1.9] mb-5 font-light">
             O <strong className="text-white font-semibold">Grupo All Party</strong> realiza a 4ª edição
             do IPDCON — o maior encontro de líderes do mercado de eventos educacionais e corporativos
             do Brasil.
           </p>
-          <p className="text-muted text-[0.93rem] leading-[1.9] font-light">
+          <p className="text-white text-[0.93rem] leading-[1.9] font-light">
             Em um único dia reunimos diretores de colégio, líderes de ensino e profissionais de
             marketing para debater o futuro do setor, trocar experiências e fechar parcerias
             estratégicas.
@@ -32,7 +32,7 @@ export function SobreEvento() {
           <div className="relative overflow-hidden bg-card border border-pink-border border-l-[3px] border-l-pink rounded-[4px] px-10 py-8">
             <div
               className="absolute -top-8 -right-8 w-[120px] h-[120px] rounded-full"
-              style={{ background: "radial-gradient(circle, rgba(203,22,150,0.18), transparent)" }}
+              style={{ background: "radial-gradient(circle, rgba(147,65,236,0.18), transparent)" }}
             />
             <div className="font-montserrat font-black text-[3.8rem] leading-none bg-gradient-to-br from-pink to-[#e030b0] bg-clip-text text-transparent mb-2">
               500+
@@ -50,7 +50,7 @@ export function SobreEvento() {
             ].map(({ n, l }) => (
               <div key={l} className="bg-card border border-card-border rounded-[4px] p-6 text-center">
                 <div className="font-montserrat font-extrabold text-[1.9rem] text-gold mb-1">{n}</div>
-                <MonoLabel className="text-muted">{l}</MonoLabel>
+                <MonoLabel className="text-white">{l}</MonoLabel>
               </div>
             ))}
           </div>

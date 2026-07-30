@@ -16,7 +16,7 @@ export default async function OgImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(203,22,150,0.35) 0%, #080810 65%)",
+          background: "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(147,65,236,0.35) 0%, #080810 65%)",
           backgroundColor: "#080810",
         }}
       >
@@ -25,11 +25,11 @@ export default async function OgImage() {
             display: "flex",
             alignItems: "center",
             gap: 8,
-            border: "1px solid rgba(203,22,150,0.4)",
+            border: "1px solid rgba(147,65,236,0.4)",
             borderRadius: 4,
             padding: "10px 24px",
             marginBottom: 40,
-            color: "#cb1696",
+            color: "#d4af37",
             fontSize: 22,
             letterSpacing: 4,
             textTransform: "uppercase",
@@ -39,7 +39,7 @@ export default async function OgImage() {
           4ª Edição · 15.08.2026 · São Paulo
         </div>
         <div style={{ display: "flex", fontSize: 128, fontWeight: 900, color: "#fff" }}>
-          IPD<span style={{ color: "#cb1696" }}>CON</span>
+          IPD<span style={{ color: "#6d04d7" }}>CON</span>
         </div>
         <div style={{ display: "flex", fontSize: 40, color: "#d4af37", letterSpacing: 6, marginTop: 8 }}>
           2026

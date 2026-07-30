@@ -34,7 +34,7 @@ const ACCENT_STYLES = {
     iconBg: "bg-pink-dim",
     iconText: "text-pink",
     top: "from-pink",
-    hoverShadow: "hover:shadow-[0_24px_60px_rgba(203,22,150,0.18)]",
+    hoverShadow: "hover:shadow-[0_24px_60px_rgba(147,65,236,0.18)]",
     divider: "bg-pink",
   },
   gold: {
@@ -61,7 +61,7 @@ export function GrupoAllParty() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(203,22,150,0.07) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(147,65,236,0.07) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />

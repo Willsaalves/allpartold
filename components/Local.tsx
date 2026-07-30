@@ -54,7 +54,7 @@ export function Local() {
             />
             <div
               className="absolute inset-0"
-              style={{ background: "linear-gradient(135deg, rgba(203,22,150,0.25) 0%, transparent 60%)" }}
+              style={{ background: "linear-gradient(135deg, rgba(147,65,236,0.25) 0%, transparent 60%)" }}
             />
           </div>
         </div>
