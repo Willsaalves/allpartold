@@ -71,7 +71,7 @@ export function Formulario() {
 
   if (status === "success") {
     return (
-      <section id="inscricao" className="bg-surface section-container py-28">
+      <section id="inscricao" className="bg-surface section-container py-28 scroll-mt-[88px]">
         <div className="max-w-[520px] mx-auto text-center">
           <div className="w-[60px] h-[60px] rounded-full bg-pink-dim border border-pink flex items-center justify-center mx-auto mb-8 text-pink">
             <IconRocket />
@@ -88,7 +88,7 @@ export function Formulario() {
   }
 
   return (
-    <section id="inscricao" className="bg-surface section-container py-28">
+    <section id="inscricao" className="bg-surface section-container py-28 scroll-mt-[88px]">
       <div className="max-w-content mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-16 lg:gap-24 items-start">
         <div>
           <div className="flex items-center gap-3 mb-6">

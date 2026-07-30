@@ -11,7 +11,7 @@ const DETAILS = [
 
 export function Local() {
   return (
-    <section id="local" className="bg-surface section-container py-28">
+    <section id="local" className="bg-surface section-container py-28 scroll-mt-[88px]">
       <div className="max-w-content mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
           <div className="flex items-center gap-3 mb-6">

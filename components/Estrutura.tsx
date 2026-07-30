@@ -21,7 +21,7 @@ const FLOORS = [
 
 export function Estrutura() {
   return (
-    <section id="programacao" className="bg-bg section-container py-28">
+    <section id="programacao" className="bg-bg section-container py-28 scroll-mt-[88px]">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-16">
           <SectionLabel>estrutura_do_evento</SectionLabel>

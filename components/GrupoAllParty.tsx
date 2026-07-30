@@ -80,7 +80,7 @@ export function GrupoAllParty() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {COMPANIES.map(({ icon: Icon, name, slug, tagline, desc, accent }) => {
             const s = ACCENT_STYLES[accent];
             return (
@@ -117,8 +117,8 @@ export function GrupoAllParty() {
           })}
         </div>
 
-        <div className="text-center mt-14">
-          <MonoLabel className="text-muted">
+        <div className="text-center mt-14 px-4">
+          <MonoLabel className="text-muted break-words">
             realizando_o_ipdcon_2026_com_excelência_e_propósito
           </MonoLabel>
         </div>

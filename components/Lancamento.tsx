@@ -63,14 +63,9 @@ export function Lancamento() {
           mercado começa aqui.
         </p>
 
-        <div className="flex justify-center flex-wrap border border-card-border rounded-2xl overflow-hidden bg-card">
-          {STATS.map(({ label, value }, i) => (
-            <div
-              key={label}
-              className={`flex-1 min-w-[160px] px-10 py-8 text-center ${
-                i > 0 ? "border-l border-card-border" : ""
-              }`}
-            >
+        <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-card-border border border-card-border rounded-2xl overflow-hidden bg-card">
+          {STATS.map(({ label, value }) => (
+            <div key={label} className="px-6 sm:px-10 py-8 text-center">
               <div className="font-montserrat font-extrabold text-[2rem] text-pink mb-1">{value}</div>
               <MonoLabel className="text-white">{label}</MonoLabel>
             </div>
