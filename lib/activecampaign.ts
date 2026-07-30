@@ -5,10 +5,69 @@ type ActiveCampaignInput = {
 };
 
 const AC_LIST_SUBSCRIBED_STATUS = 1;
+const AC_LIST_SOURCE_PUBLIC_FORM = 1;
+const LEAD_TAG_NAME = process.env.ACTIVECAMPAIGN_TAG_NAME || "IPDCON 2026 - Formulário";
 
 function splitName(nome: string) {
   const [firstName, ...rest] = nome.trim().split(/\s+/);
   return { firstName: firstName ?? "", lastName: rest.join(" ") };
+}
+
+function authHeaders(apiKey: string) {
+  return {
+    "Content-Type": "application/json",
+    "Api-Token": apiKey,
+  };
+}
+
+async function getOrCreateTagId(baseUrl: string, apiKey: string, tagName: string): Promise<number> {
+  const searchRes = await fetch(
+    `${baseUrl}/api/3/tags?search=${encodeURIComponent(tagName)}&limit=100`,
+    { headers: authHeaders(apiKey) }
+  );
+
+  if (!searchRes.ok) {
+    throw new Error(`ActiveCampaign tags (busca) falhou: ${searchRes.status} ${await searchRes.text()}`);
+  }
+
+  const searchData = await searchRes.json();
+  const existing = (searchData?.tags ?? []).find((t: { tag: string }) => t.tag === tagName);
+  if (existing) return Number(existing.id);
+
+  const createRes = await fetch(`${baseUrl}/api/3/tags`, {
+    method: "POST",
+    headers: authHeaders(apiKey),
+    body: JSON.stringify({ tag: { tag: tagName, tagType: "contact" } }),
+  });
+
+  if (!createRes.ok) {
+    // Pode ter sido criada em paralelo por outra requisição — tenta buscar de novo antes de desistir.
+    const retryRes = await fetch(
+      `${baseUrl}/api/3/tags?search=${encodeURIComponent(tagName)}&limit=100`,
+      { headers: authHeaders(apiKey) }
+    );
+    const retryData = await retryRes.json().catch(() => null);
+    const foundOnRetry = retryData?.tags?.find((t: { tag: string }) => t.tag === tagName);
+    if (foundOnRetry) return Number(foundOnRetry.id);
+
+    throw new Error(`ActiveCampaign tags (criação) falhou: ${createRes.status} ${await createRes.text()}`);
+  }
+
+  const createData = await createRes.json();
+  return Number(createData.tag.id);
+}
+
+async function tagContact(baseUrl: string, apiKey: string, contactId: string, tagId: number) {
+  const res = await fetch(`${baseUrl}/api/3/contactTags`, {
+    method: "POST",
+    headers: authHeaders(apiKey),
+    body: JSON.stringify({ contactTag: { contact: contactId, tag: tagId } }),
+  });
+
+  // 422 aqui normalmente significa que a tag já está associada a esse contato — não é erro.
+  if (!res.ok && res.status !== 422) {
+    throw new Error(`ActiveCampaign contactTags falhou: ${res.status} ${await res.text()}`);
+  }
 }
 
 export async function syncContactToActiveCampaign(input: ActiveCampaignInput): Promise<void> {
@@ -24,10 +83,7 @@ export async function syncContactToActiveCampaign(input: ActiveCampaignInput): P
 
   const syncRes = await fetch(`${baseUrl}/api/3/contact/sync`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Api-Token": apiKey,
-    },
+    headers: authHeaders(apiKey),
     body: JSON.stringify({
       contact: {
         email: input.email,
@@ -49,23 +105,28 @@ export async function syncContactToActiveCampaign(input: ActiveCampaignInput): P
     throw new Error("ActiveCampaign contact/sync não retornou um id de contato");
   }
 
+  // Marca o contato como lead vindo do formulário do IPDCON — funciona mesmo
+  // sem lista configurada, e fica visível direto no perfil do contato.
+  const tagId = await getOrCreateTagId(baseUrl, apiKey, LEAD_TAG_NAME);
+  await tagContact(baseUrl, apiKey, contactId, tagId);
+
   if (!listId) {
-    // Lista ainda não configurada: contato já foi criado/atualizado no
-    // ActiveCampaign, só não é associado a nenhuma lista por enquanto.
+    // Lista ainda não configurada: contato já foi criado/atualizado e marcado
+    // com a tag no ActiveCampaign, só não é associado a nenhuma lista por enquanto.
     return;
   }
 
   const listRes = await fetch(`${baseUrl}/api/3/contactLists`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Api-Token": apiKey,
-    },
+    headers: authHeaders(apiKey),
     body: JSON.stringify({
       contactList: {
         list: listId,
         contact: contactId,
         status: AC_LIST_SUBSCRIBED_STATUS,
+        // 1 = "Public Form": marca a inscrição como vinda de formulário público
+        // em vez do padrão da API, para refletir corretamente a origem no ActiveCampaign.
+        sourceid: AC_LIST_SOURCE_PUBLIC_FORM,
       },
     }),
   });

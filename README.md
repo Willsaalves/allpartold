@@ -29,13 +29,14 @@ Veja `.env.example`. Nunca commitar valores reais.
 | `ACTIVECAMPAIGN_URL` | URL base da conta ActiveCampaign, ex: `https://sua-conta.api-us1.com` |
 | `ACTIVECAMPAIGN_API_KEY` | API Token da conta (Settings → Developer) |
 | `ACTIVECAMPAIGN_LIST_ID` | *(opcional)* ID da lista do ActiveCampaign para associar os cadastros do evento. Sem ela, o contato ainda é criado/atualizado no ActiveCampaign, só não entra em nenhuma lista até essa variável ser configurada. |
+| `ACTIVECAMPAIGN_TAG_NAME` | *(opcional)* Nome da tag aplicada a todo contato vindo deste formulário, pra identificá-lo como lead do IPDCON no ActiveCampaign independente de lista. Padrão: `IPDCON 2026 - Formulário`. |
 | `NEXT_PUBLIC_SITE_URL` | URL pública final do site, usada em metadata/OG/sitemap/robots |
 
 ## Fluxo de cadastro (`/api/cadastro`)
 
 1. Valida o payload (`nome`, `email`, `telefone` obrigatórios; `empresa`, `cargo`, `segmento`, `autorizo` opcionais).
 2. Salva o registro no Postgres via Prisma (`Registration`) — isso é garantido antes de qualquer chamada externa.
-3. Tenta sincronizar o contato com o ActiveCampaign (`POST /api/3/contact/sync` e depois `POST /api/3/contactLists`), isolado em `try/catch`.
+3. Tenta sincronizar o contato com o ActiveCampaign: `POST /api/3/contact/sync`, aplica a tag de lead (criando-a se ainda não existir) via `POST /api/3/tags` + `POST /api/3/contactTags`, e depois `POST /api/3/contactLists` se a lista estiver configurada — tudo isolado em `try/catch`.
 4. Se a sincronização falhar, o registro permanece salvo com `syncedToAC = false` (para reprocessamento manual/posterior) e a resposta ao usuário continua sendo de sucesso — o cadastro nunca é perdido por causa de uma indisponibilidade do CRM.
 
 ## Deploy na Vercel
