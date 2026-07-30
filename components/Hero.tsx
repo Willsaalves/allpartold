@@ -71,7 +71,7 @@ export function Hero() {
         <h1 className="font-montserrat font-black text-[clamp(4.5rem,14vw,10rem)] leading-[0.9] tracking-[-0.03em] mb-7 text-white">
           IPD<span className="text-purple [text-shadow:0_0_40px_rgba(109,4,215,0.5)]">CON</span>
           <br />
-          <span className="block text-[0.28em] font-bold font-mono text-gold tracking-[0.15em] mt-2">
+          <span className="block text-[0.28em] font-bold font-mono text-[#cb1696] tracking-[0.15em] mt-2">
             {yearDisplay}
           </span>
         </h1>
