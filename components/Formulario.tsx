@@ -80,7 +80,7 @@ export function Formulario() {
             Inscrição recebida!
           </h2>
           <p className="text-muted leading-[1.75]">
-            Entraremos em contato em breve. Nos vemos no IPDCON 2026!
+            Nos vemos no IPDCON 2026!
           </p>
         </div>
       </section>
