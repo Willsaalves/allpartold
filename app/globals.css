@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080810;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #080810;
+}
+::-webkit-scrollbar-thumb {
+  background: #cb1696;
+  border-radius: 2px;
+}
+
+.pink-text {
+  background: linear-gradient(135deg, #cb1696 0%, #e030b0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #d4af37 0%, #f0d060 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-text {
+  background: linear-gradient(135deg, #cb1696 0%, #6d04d7 60%, #cb1696 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #cb1696 !important;
+  box-shadow: 0 0 0 2px rgba(203, 22, 150, 0.15);
+}
+
+.mono-label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(1.5rem, calc((100% - 1200px) / 2 + 1.5rem));
+  padding-right: max(1.5rem, calc((100% - 1200px) / 2 + 1.5rem));
+}
