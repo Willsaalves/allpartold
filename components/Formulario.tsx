@@ -20,7 +20,7 @@ const BENEFITS = [
 ];
 
 const inputClass =
-  "w-full bg-surface border border-white/[0.08] rounded-[3px] px-[1.1rem] py-[0.875rem] text-white font-inter text-[0.88rem] transition-colors box-border";
+  "w-full bg-surface border border-white/[0.08] rounded-lg px-[1.1rem] py-[0.875rem] text-white font-inter text-[0.88rem] transition-colors box-border";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -108,7 +108,7 @@ export function Formulario() {
           {BENEFITS.map((item) => (
             <div
               key={item}
-              className="flex gap-3 items-center mb-3 px-4 py-[0.7rem] bg-card border border-card-border rounded-[3px]"
+              className="flex gap-3 items-center mb-3 px-4 py-[0.7rem] bg-card border border-card-border rounded-lg"
             >
               <div className="w-[6px] h-[6px] rounded-full bg-pink shrink-0" />
               <span className="text-gray text-[0.87rem]">{item}</span>
@@ -118,7 +118,7 @@ export function Formulario() {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-card border border-pink-border border-t-2 border-t-pink rounded-[4px] p-12"
+          className="bg-card border border-pink-border border-t-2 border-t-pink rounded-2xl p-12"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="sm:col-span-2">
@@ -235,7 +235,7 @@ export function Formulario() {
           </label>
 
           {status === "error" && (
-            <div className="mb-6 px-4 py-3 rounded-[3px] border border-pink-border bg-pink-dim text-pink text-[0.85rem]">
+            <div className="mb-6 px-4 py-3 rounded-lg border border-pink-border bg-pink-dim text-pink text-[0.85rem]">
               {errorMessage}
             </div>
           )}
@@ -243,7 +243,7 @@ export function Formulario() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full bg-[linear-gradient(135deg,#9341ec_0%,#e030b0_50%,#9341ec_100%)] text-white border-none px-4 py-[1.1rem] rounded-[3px] font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase cursor-pointer transition-all shadow-[0_4px_24px_rgba(147,65,236,0.4)] hover:opacity-90 hover:-translate-y-px disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0"
+            className="w-full bg-[linear-gradient(135deg,#9341ec_0%,#e030b0_50%,#9341ec_100%)] text-white border-none px-4 py-[1.1rem] rounded-lg font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase cursor-pointer transition-all shadow-[0_4px_24px_rgba(147,65,236,0.4)] hover:opacity-90 hover:-translate-y-px disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0"
           >
             {status === "submitting" ? "Enviando..." : "Inscrever-se agora"}
           </button>

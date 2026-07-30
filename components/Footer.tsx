@@ -54,7 +54,7 @@ export function Footer() {
                   aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[38px] h-[38px] border border-white/10 rounded-[3px] flex items-center justify-center text-muted transition-colors hover:border-pink hover:text-pink"
+                  className="w-[38px] h-[38px] border border-white/10 rounded-lg flex items-center justify-center text-muted transition-colors hover:border-pink hover:text-pink"
                 >
                   <Icon />
                 </a>
@@ -62,7 +62,7 @@ export function Footer() {
             </div>
             <a
               href="#inscricao"
-              className="inline-block border border-pink-border text-pink px-5 py-[0.55rem] rounded-[3px] font-montserrat font-bold text-[0.7rem] tracking-[0.12em] uppercase transition-colors hover:bg-pink-dim"
+              className="inline-block border border-pink-border text-pink px-5 py-[0.55rem] rounded-lg font-montserrat font-bold text-[0.7rem] tracking-[0.12em] uppercase transition-colors hover:bg-pink-dim"
             >
               Inscrever-se
             </a>

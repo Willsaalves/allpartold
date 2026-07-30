@@ -29,7 +29,7 @@ export function SobreEvento() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="relative overflow-hidden bg-card border border-pink-border border-l-[3px] border-l-pink rounded-[4px] px-10 py-8">
+          <div className="relative overflow-hidden bg-card border border-pink-border border-l-[3px] border-l-pink rounded-2xl px-10 py-8">
             <div
               className="absolute -top-8 -right-8 w-[120px] h-[120px] rounded-full"
               style={{ background: "radial-gradient(circle, rgba(147,65,236,0.18), transparent)" }}
@@ -48,7 +48,7 @@ export function SobreEvento() {
               { n: "4ª", l: "edição" },
               { n: "1 dia", l: "imersão" },
             ].map(({ n, l }) => (
-              <div key={l} className="bg-card border border-card-border rounded-[4px] p-6 text-center">
+              <div key={l} className="bg-card border border-card-border rounded-2xl p-6 text-center">
                 <div className="font-montserrat font-extrabold text-[1.9rem] text-gold mb-1">{n}</div>
                 <MonoLabel className="text-white">{l}</MonoLabel>
               </div>

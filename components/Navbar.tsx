@@ -43,7 +43,7 @@ export function Navbar() {
           ))}
           <a
             href="#inscricao"
-            className="bg-gradient-to-br from-pink to-[#e030b0] text-white px-6 py-2 rounded-[3px] font-montserrat font-bold text-[0.72rem] tracking-[0.1em] uppercase shadow-[0_0_20px_rgba(147,65,236,0.3)] transition-opacity hover:opacity-85"
+            className="bg-gradient-to-br from-pink to-[#e030b0] text-white px-6 py-2 rounded-lg font-montserrat font-bold text-[0.72rem] tracking-[0.1em] uppercase shadow-[0_0_20px_rgba(147,65,236,0.3)] transition-opacity hover:opacity-85"
           >
             Inscrever-se
           </a>
@@ -51,7 +51,7 @@ export function Navbar() {
 
         <a
           href="#inscricao"
-          className="md:hidden bg-gradient-to-br from-pink to-[#e030b0] text-white px-4 py-2 rounded-[3px] font-montserrat font-bold text-[0.68rem] tracking-[0.1em] uppercase shadow-[0_0_20px_rgba(147,65,236,0.3)]"
+          className="md:hidden bg-gradient-to-br from-pink to-[#e030b0] text-white px-4 py-2 rounded-lg font-montserrat font-bold text-[0.68rem] tracking-[0.1em] uppercase shadow-[0_0_20px_rgba(147,65,236,0.3)]"
         >
           Inscrever-se
         </a>

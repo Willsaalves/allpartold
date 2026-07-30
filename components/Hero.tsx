@@ -63,7 +63,7 @@ export function Hero() {
       />
 
       <div className="relative text-center px-8 pt-36 pb-16 max-w-[960px] w-full">
-        <div className="inline-flex items-center gap-2 bg-[rgba(147,65,236,0.08)] border border-pink-border px-[1.1rem] py-[0.38rem] rounded-sm mb-8">
+        <div className="inline-flex items-center gap-2 bg-[rgba(147,65,236,0.08)] border border-pink-border px-[1.1rem] py-[0.38rem] rounded-full mb-8">
           <span className="w-[5px] h-[5px] rounded-full bg-pink shadow-[0_0_8px_#9341ec]" />
           <span className="mono-label text-gold">4ª Edição · 15.08.2026 · São Paulo</span>
         </div>
@@ -82,18 +82,12 @@ export function Hero() {
           <strong className="text-white font-semibold">o mercado de formaturas e eventos</strong>
         </p>
 
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="flex justify-center">
           <a
             href="#inscricao"
-            className="inline-block bg-[linear-gradient(135deg,#d4af37_0%,#f0d060_50%,#d4af37_100%)] text-[#0a0808] px-11 py-4 rounded-[3px] font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase shadow-[0_0_28px_rgba(212,175,55,0.45)] transition-all hover:-translate-y-[3px] hover:shadow-[0_8px_40px_rgba(212,175,55,0.6)]"
+            className="inline-block bg-[linear-gradient(135deg,#d4af37_0%,#f0d060_50%,#d4af37_100%)] text-[#0a0808] px-11 py-4 rounded-lg font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase shadow-[0_0_28px_rgba(212,175,55,0.45)] transition-all hover:-translate-y-[3px] hover:shadow-[0_8px_40px_rgba(212,175,55,0.6)]"
           >
             Quero participar
-          </a>
-          <a
-            href="#programacao"
-            className="inline-block border border-pink-border text-pink px-9 py-4 rounded-[3px] font-montserrat font-semibold text-[0.82rem] tracking-[0.1em] uppercase transition-colors hover:bg-pink-dim hover:border-pink"
-          >
-            Ver programação
           </a>
         </div>
 

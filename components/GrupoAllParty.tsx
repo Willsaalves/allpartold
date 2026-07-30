@@ -76,7 +76,7 @@ export function GrupoAllParty() {
             </span>
           </h2>
           <p className="font-inter text-base text-muted m-0 font-light">
-            Um ecossistema completo de experiências
+            O maior ecossistema de eventos do Brasil
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export function GrupoAllParty() {
             return (
               <div
                 key={name}
-                className={`relative overflow-hidden bg-card border ${s.border} rounded-[4px] px-9 py-11 transition-all duration-300 hover:-translate-y-[6px] ${s.hoverShadow}`}
+                className={`relative overflow-hidden bg-card border ${s.border} rounded-2xl px-9 py-11 transition-all duration-300 hover:-translate-y-[6px] ${s.hoverShadow}`}
               >
                 <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${s.top} to-transparent`} />
                 <div
@@ -99,7 +99,7 @@ export function GrupoAllParty() {
                 </div>
 
                 <div
-                  className={`w-14 h-14 rounded-[6px] flex items-center justify-center mb-6 border ${s.border} ${s.iconBg} ${s.iconText}`}
+                  className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 border ${s.border} ${s.iconBg} ${s.iconText}`}
                 >
                   <Icon />
                 </div>

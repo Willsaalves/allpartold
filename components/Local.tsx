@@ -32,7 +32,7 @@ export function Local() {
             {DETAILS.map(([k, v]) => (
               <div
                 key={k}
-                className="flex gap-4 items-center px-4 py-[0.8rem] bg-card border border-card-border rounded-[3px]"
+                className="flex gap-4 items-center px-4 py-[0.8rem] bg-card border border-card-border rounded-lg"
               >
                 <MonoLabel className="text-pink">{k}</MonoLabel>
                 <div className="flex-1 h-px bg-card-border" />
@@ -43,8 +43,8 @@ export function Local() {
         </div>
 
         <div className="relative">
-          <div className="absolute -top-4 -right-4 bottom-4 left-4 border border-pink-border rounded-[4px] z-0" />
-          <div className="relative z-10 rounded-[4px] overflow-hidden aspect-[4/3]">
+          <div className="absolute -top-4 -right-4 bottom-4 left-4 border border-pink-border rounded-2xl z-0" />
+          <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/3]">
             <Image
               src="https://images.unsplash.com/photo-1700514077430-3659e38eb5e7?w=700&h=525&fit=crop&auto=format"
               alt="Espaço Hakka — local do IPDCON 2026 em São Paulo"

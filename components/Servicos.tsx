@@ -27,13 +27,13 @@ export function Servicos() {
           <SectionLabel>incluso_na_inscrição</SectionLabel>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-pink-border border border-pink-border rounded-[4px] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[rgba(203,22,150,0.35)] border border-[rgba(203,22,150,0.35)] rounded-2xl overflow-hidden">
           {ITEMS.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
               className="bg-card px-9 py-11 text-center transition-colors hover:bg-[#141425]"
             >
-              <div className="text-pink mb-5 flex justify-center">
+              <div className="text-[#cb1696] mb-5 flex justify-center">
                 <Icon />
               </div>
               <h4 className="font-montserrat font-bold text-base text-white mb-2">{title}</h4>

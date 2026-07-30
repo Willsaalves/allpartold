@@ -40,7 +40,7 @@ export function Lancamento() {
       ))}
 
       <div className="relative max-w-content mx-auto text-center">
-        <div className="inline-flex items-center gap-[0.6rem] bg-pink-dim border border-pink-border px-5 py-[0.45rem] rounded-sm mb-10">
+        <div className="inline-flex items-center gap-[0.6rem] bg-pink-dim border border-pink-border px-5 py-[0.45rem] rounded-full mb-10">
           <span className="text-gold">
             <IconRocket />
           </span>
@@ -63,7 +63,7 @@ export function Lancamento() {
           mercado começa aqui.
         </p>
 
-        <div className="flex justify-center flex-wrap border border-card-border rounded-[4px] overflow-hidden bg-card">
+        <div className="flex justify-center flex-wrap border border-card-border rounded-2xl overflow-hidden bg-card">
           {STATS.map(({ label, value }, i) => (
             <div
               key={label}
