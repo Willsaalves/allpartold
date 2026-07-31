@@ -68,7 +68,7 @@ export function Hero() {
           <span className="mono-label text-gold">4ª Edição · 15.08.2026 · São Paulo</span>
         </div>
 
-        <h1 className="font-montserrat font-black text-[clamp(2.75rem,min(14vw,20vh),10rem)] leading-[0.9] tracking-[-0.03em] mb-[clamp(0.75rem,5vh,1.75rem)] text-white">
+        <h1 className="font-montserrat font-black text-[clamp(1.75rem,min(14vw,20vh),10rem)] leading-[0.9] tracking-[-0.03em] mb-[clamp(0.75rem,5vh,1.75rem)] text-white">
           IPD<span className="text-purple [text-shadow:0_0_40px_rgba(109,4,215,0.5)]">CON</span>
           <br />
           <span className="block text-[0.28em] font-bold font-mono text-[#cb1696] tracking-[0.15em] mt-2">
@@ -85,7 +85,7 @@ export function Hero() {
         <div className="flex justify-center">
           <a
             href="#inscricao"
-            className="inline-block bg-[linear-gradient(135deg,#d4af37_0%,#f0d060_50%,#d4af37_100%)] text-[#0a0808] px-11 py-4 rounded-lg font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase shadow-[0_0_28px_rgba(212,175,55,0.45)] transition-all hover:-translate-y-[3px] hover:shadow-[0_8px_40px_rgba(212,175,55,0.6)]"
+            className="inline-block bg-[linear-gradient(135deg,#d4af37_0%,#f0d060_50%,#d4af37_100%)] text-[#0a0808] px-6 sm:px-11 py-4 rounded-lg font-montserrat font-extrabold text-[0.82rem] tracking-[0.15em] uppercase shadow-[0_0_28px_rgba(212,175,55,0.45)] transition-all hover:-translate-y-[3px] hover:shadow-[0_8px_40px_rgba(212,175,55,0.6)]"
           >
             Quero participar
           </a>

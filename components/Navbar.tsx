@@ -24,7 +24,7 @@ export function Navbar() {
         scrolled ? "bg-[rgba(8,8,16,0.92)] backdrop-blur-2xl border-b border-card-border" : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="flex items-center justify-between h-[68px]">
+      <div className="flex items-center justify-between flex-wrap gap-x-3 gap-y-2 min-h-[68px] py-2">
         <a href="#top" className="font-montserrat font-black text-[1.05rem] tracking-[0.06em] flex items-baseline gap-[0.1rem]">
           <span className="text-white">IPD</span>
           <span className="text-purple">CON</span>

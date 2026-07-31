@@ -47,7 +47,7 @@ export function Lancamento() {
           <MonoLabel className="text-gold">lançamento_em_primeira_mão</MonoLabel>
         </div>
 
-        <h2 className="font-montserrat font-black text-[clamp(2rem,5vw,4rem)] leading-[1.02] mb-3 text-white">
+        <h2 className="font-montserrat font-black text-[clamp(2rem,5vw,4rem)] leading-[1.02] mb-3 text-white break-words">
           Franquias All Party
         </h2>
 

@@ -120,9 +120,10 @@ export function GrupoAllParty() {
                   href={`https://instagram.com/${instagram}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`relative inline-flex items-center gap-2 text-[0.8rem] font-medium transition-opacity hover:opacity-75 ${s.iconText}`}
+                  className={`relative inline-flex items-center gap-2 text-[0.8rem] font-medium transition-opacity hover:opacity-75 max-w-full ${s.iconText}`}
                 >
-                  <IconInstagram />@{instagram}
+                  <IconInstagram className="shrink-0" />
+                  <span className="break-all">@{instagram}</span>
                 </a>
               </div>
             );

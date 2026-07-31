@@ -118,7 +118,7 @@ export function Formulario() {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-card border border-pink-border border-t-2 border-t-pink rounded-2xl p-12"
+          className="bg-card border border-pink-border border-t-2 border-t-pink rounded-2xl p-6 sm:p-12"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="sm:col-span-2">

@@ -9,7 +9,7 @@ export function SobreEvento() {
             <div className="w-8 h-px bg-pink" />
             <MonoLabel>sobre_o_evento</MonoLabel>
           </div>
-          <h2 className="font-montserrat font-black text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.05] mb-6 text-white">
+          <h2 className="font-montserrat font-black text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.05] mb-6 text-white break-words">
             Uma experiência
             <br />
             <span className="bg-gradient-to-br from-pink to-purple bg-clip-text text-transparent">
@@ -29,12 +29,12 @@ export function SobreEvento() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="relative overflow-hidden bg-card border border-pink-border border-l-[3px] border-l-pink rounded-2xl px-10 py-8">
+          <div className="relative overflow-hidden bg-card border border-pink-border border-l-[3px] border-l-pink rounded-2xl px-6 sm:px-10 py-8">
             <div
               className="absolute -top-8 -right-8 w-[120px] h-[120px] rounded-full"
               style={{ background: "radial-gradient(circle, rgba(147,65,236,0.18), transparent)" }}
             />
-            <div className="font-montserrat font-black text-[3.8rem] leading-none bg-gradient-to-br from-pink to-[#e030b0] bg-clip-text text-transparent mb-2">
+            <div className="font-montserrat font-black text-[clamp(2.5rem,10vw,3.8rem)] leading-none bg-gradient-to-br from-pink to-[#e030b0] bg-clip-text text-transparent mb-2">
               500+
             </div>
             <p className="text-gray text-[0.93rem] leading-[1.6] m-0">

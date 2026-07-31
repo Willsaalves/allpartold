@@ -4,8 +4,6 @@ type ActiveCampaignInput = {
   telefone: string;
 };
 
-const AC_LIST_SUBSCRIBED_STATUS = 1;
-const AC_LIST_SOURCE_PUBLIC_FORM = 1;
 const LEAD_TAG_NAME = process.env.ACTIVECAMPAIGN_TAG_NAME || "IPDCON 2026 - Formulário";
 
 function splitName(nome: string) {
@@ -73,7 +71,6 @@ async function tagContact(baseUrl: string, apiKey: string, contactId: string, ta
 export async function syncContactToActiveCampaign(input: ActiveCampaignInput): Promise<void> {
   const baseUrl = process.env.ACTIVECAMPAIGN_URL;
   const apiKey = process.env.ACTIVECAMPAIGN_API_KEY;
-  const listId = process.env.ACTIVECAMPAIGN_LIST_ID;
 
   if (!baseUrl || !apiKey) {
     throw new Error("Variáveis de ambiente do ActiveCampaign não configuradas");
@@ -105,33 +102,8 @@ export async function syncContactToActiveCampaign(input: ActiveCampaignInput): P
     throw new Error("ActiveCampaign contact/sync não retornou um id de contato");
   }
 
-  // Marca o contato como lead vindo do formulário do IPDCON — funciona mesmo
-  // sem lista configurada, e fica visível direto no perfil do contato.
+  // Marca o contato como lead vindo do formulário do IPDCON — fica visível
+  // direto no perfil do contato e é usada para segmentação/relatórios.
   const tagId = await getOrCreateTagId(baseUrl, apiKey, LEAD_TAG_NAME);
   await tagContact(baseUrl, apiKey, contactId, tagId);
-
-  if (!listId) {
-    // Lista ainda não configurada: contato já foi criado/atualizado e marcado
-    // com a tag no ActiveCampaign, só não é associado a nenhuma lista por enquanto.
-    return;
-  }
-
-  const listRes = await fetch(`${baseUrl}/api/3/contactLists`, {
-    method: "POST",
-    headers: authHeaders(apiKey),
-    body: JSON.stringify({
-      contactList: {
-        list: listId,
-        contact: contactId,
-        status: AC_LIST_SUBSCRIBED_STATUS,
-        // 1 = "Public Form": marca a inscrição como vinda de formulário público
-        // em vez do padrão da API, para refletir corretamente a origem no ActiveCampaign.
-        sourceid: AC_LIST_SOURCE_PUBLIC_FORM,
-      },
-    }),
-  });
-
-  if (!listRes.ok) {
-    throw new Error(`ActiveCampaign contactLists falhou: ${listRes.status} ${await listRes.text()}`);
-  }
 }

@@ -25,7 +25,7 @@ export function Estrutura() {
       <div className="max-w-content mx-auto">
         <div className="text-center mb-16">
           <SectionLabel>estrutura_do_evento</SectionLabel>
-          <h2 className="font-montserrat font-black text-[clamp(1.6rem,3.5vw,2.5rem)] text-white m-0">
+          <h2 className="font-montserrat font-black text-[clamp(1.6rem,3.5vw,2.5rem)] text-white m-0 break-words">
             Dois ambientes, uma experiência completa
           </h2>
         </div>
@@ -34,7 +34,7 @@ export function Estrutura() {
           {FLOORS.map(({ icon: Icon, floor, title, desc, accent }) => (
             <div
               key={floor}
-              className={`bg-card rounded-2xl p-12 transition-all duration-300 hover:-translate-y-[5px] ${
+              className={`bg-card rounded-2xl p-6 sm:p-12 transition-all duration-300 hover:-translate-y-[5px] ${
                 accent === "pink"
                   ? "border border-pink-border border-t-2 border-t-pink hover:shadow-[0_20px_60px_rgba(147,65,236,0.15)]"
                   : "border border-gold-border border-t-2 border-t-gold hover:shadow-[0_20px_60px_rgba(212,175,55,0.1)]"
