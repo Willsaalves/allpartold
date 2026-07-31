@@ -54,14 +54,6 @@ export function Hero() {
           backgroundSize: "32px 32px",
         }}
       />
-      <div
-        className="absolute left-0 right-0 h-px opacity-40"
-        style={{
-          background: "linear-gradient(90deg, transparent, #9341ec, transparent)",
-          top: "45%",
-        }}
-      />
-
       <div className="relative text-center px-6 sm:px-8 pt-[clamp(4rem,18vh,9rem)] pb-[clamp(1.5rem,8vh,4rem)] max-w-[960px] w-full">
         <div className="inline-flex items-center gap-2 bg-[rgba(147,65,236,0.08)] border border-pink-border px-[1.1rem] py-[0.38rem] rounded-full mb-[clamp(1rem,6vh,2rem)]">
           <span className="w-[5px] h-[5px] rounded-full bg-pink shadow-[0_0_8px_#9341ec]" />
@@ -81,6 +73,13 @@ export function Hero() {
           <br />
           <strong className="text-white font-semibold">o mercado de formaturas e eventos</strong>
         </p>
+
+        <div className="relative w-full h-px mb-[clamp(1.5rem,7vh,3rem)] opacity-40" aria-hidden="true">
+          <div
+            className="absolute left-1/2 top-0 h-px w-screen -translate-x-1/2"
+            style={{ background: "linear-gradient(90deg, transparent, #9341ec, transparent)" }}
+          />
+        </div>
 
         <div className="flex justify-center">
           <a
