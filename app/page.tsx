@@ -17,7 +17,7 @@ const eventJsonLd = {
   name: "IPDCON 2026",
   description:
     "4ª edição do IPDCON, o maior encontro de líderes do mercado de eventos educacionais e corporativos do Brasil.",
-  startDate: "2026-08-15",
+  startDate: "2026-08-15T19:00:00-03:00",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
   location: {

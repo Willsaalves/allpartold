@@ -1,4 +1,4 @@
-import { IconCalendarStar, IconSoundWave, IconCamera } from "./icons";
+import { IconCalendarStar, IconSoundWave, IconCamera, IconInstagram } from "./icons";
 import { SectionLabel, MonoLabel } from "./MonoLabel";
 
 const COMPANIES = [
@@ -9,6 +9,7 @@ const COMPANIES = [
     tagline: "Produtora 360°",
     desc: "Especializada em formaturas, eventos corporativos e sociais. Mais de 15 anos transformando momentos em memórias inesquecíveis.",
     accent: "pink" as const,
+    instagram: "allpartyformaturas",
   },
   {
     icon: IconSoundWave,
@@ -17,6 +18,7 @@ const COMPANIES = [
     tagline: "Som · Luz · LED · Palco",
     desc: "Soluções completas de som, iluminação, LED e palco para eventos de até 10.000 pessoas com excelência técnica.",
     accent: "gold" as const,
+    instagram: "agenciatremeterra",
   },
   {
     icon: IconCamera,
@@ -25,6 +27,7 @@ const COMPANIES = [
     tagline: "Fotografia Profissional",
     desc: "Fotografia de alto padrão para registrar cada detalhe e emoção dos momentos mais importantes da sua vida.",
     accent: "purple" as const,
+    instagram: "ap7photo",
   },
 ];
 
@@ -81,7 +84,7 @@ export function GrupoAllParty() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {COMPANIES.map(({ icon: Icon, name, slug, tagline, desc, accent }) => {
+          {COMPANIES.map(({ icon: Icon, name, slug, tagline, desc, accent, instagram }) => {
             const s = ACCENT_STYLES[accent];
             return (
               <div
@@ -111,7 +114,16 @@ export function GrupoAllParty() {
 
                 <div className={`w-7 h-px mb-4 opacity-60 ${s.divider}`} />
 
-                <p className="text-muted text-[0.85rem] leading-[1.8] m-0">{desc}</p>
+                <p className="text-muted text-[0.85rem] leading-[1.8] mb-5">{desc}</p>
+
+                <a
+                  href={`https://instagram.com/${instagram}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`relative inline-flex items-center gap-2 text-[0.8rem] font-medium transition-opacity hover:opacity-75 ${s.iconText}`}
+                >
+                  <IconInstagram />@{instagram}
+                </a>
               </div>
             );
           })}

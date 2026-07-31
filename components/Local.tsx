@@ -3,7 +3,7 @@ import { IconPin } from "./icons";
 import { MonoLabel } from "./MonoLabel";
 
 const DETAILS = [
-  ["data", "15 de agosto de 2026"],
+  ["data", "15 de agosto de 2026, 19h"],
   ["capacidade", "500+ convidados"],
   ["estacionamento", "500 vagas próprias"],
   ["formato", "Presencial / 1 dia"],
