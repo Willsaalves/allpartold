@@ -92,7 +92,6 @@ export function Hero() {
         </div>
 
         <div className="mt-[clamp(1.5rem,11vh,5rem)] flex flex-col items-center gap-2 opacity-40 [@media(max-height:480px)]:hidden">
-          <span className="mono-label text-muted">scroll</span>
           <div className="w-px h-9 bg-[linear-gradient(180deg,#9341ec,transparent)]" />
         </div>
       </div>
