@@ -62,13 +62,13 @@ export function Hero() {
         }}
       />
 
-      <div className="relative text-center px-8 pt-36 pb-16 max-w-[960px] w-full">
-        <div className="inline-flex items-center gap-2 bg-[rgba(147,65,236,0.08)] border border-pink-border px-[1.1rem] py-[0.38rem] rounded-full mb-8">
+      <div className="relative text-center px-6 sm:px-8 pt-[clamp(4rem,18vh,9rem)] pb-[clamp(1.5rem,8vh,4rem)] max-w-[960px] w-full">
+        <div className="inline-flex items-center gap-2 bg-[rgba(147,65,236,0.08)] border border-pink-border px-[1.1rem] py-[0.38rem] rounded-full mb-[clamp(1rem,6vh,2rem)]">
           <span className="w-[5px] h-[5px] rounded-full bg-pink shadow-[0_0_8px_#9341ec]" />
           <span className="mono-label text-gold">4ª Edição · 15.08.2026 · São Paulo</span>
         </div>
 
-        <h1 className="font-montserrat font-black text-[clamp(4.5rem,14vw,10rem)] leading-[0.9] tracking-[-0.03em] mb-7 text-white">
+        <h1 className="font-montserrat font-black text-[clamp(2.75rem,min(14vw,20vh),10rem)] leading-[0.9] tracking-[-0.03em] mb-[clamp(0.75rem,5vh,1.75rem)] text-white">
           IPD<span className="text-purple [text-shadow:0_0_40px_rgba(109,4,215,0.5)]">CON</span>
           <br />
           <span className="block text-[0.28em] font-bold font-mono text-[#cb1696] tracking-[0.15em] mt-2">
@@ -76,7 +76,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="font-inter text-[clamp(1rem,2.2vw,1.25rem)] font-light text-gray max-w-[600px] mx-auto mb-12 leading-[1.7]">
+        <p className="font-inter text-[clamp(1rem,2.2vw,1.25rem)] font-light text-gray max-w-[600px] mx-auto mb-[clamp(1.5rem,7vh,3rem)] leading-[1.7]">
           O encontro que vai transformar
           <br />
           <strong className="text-white font-semibold">o mercado de formaturas e eventos</strong>
@@ -91,7 +91,7 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="mt-20 flex flex-col items-center gap-2 opacity-40">
+        <div className="mt-[clamp(1.5rem,11vh,5rem)] flex flex-col items-center gap-2 opacity-40 [@media(max-height:480px)]:hidden">
           <span className="mono-label text-muted">scroll</span>
           <div className="w-px h-9 bg-[linear-gradient(180deg,#9341ec,transparent)]" />
         </div>
