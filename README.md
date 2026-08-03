@@ -30,6 +30,7 @@ Veja `.env.example`. Nunca commitar valores reais.
 | `ACTIVECAMPAIGN_API_KEY` | API Token da conta (Settings → Developer) |
 | `ACTIVECAMPAIGN_TAG_NAME` | *(opcional)* Nome da tag aplicada a todo contato vindo deste formulário, usada para identificar/segmentar os leads do IPDCON no ActiveCampaign. Padrão: `IPDCON 2026 - Formulário`. |
 | `NEXT_PUBLIC_SITE_URL` | URL pública final do site, usada em metadata/OG/sitemap/robots |
+| `INTERNAL_API_KEY` | Chave secreta exigida por `GET /api/registrations` (ver abaixo). Gere um valor longo e aleatório, ex: `openssl rand -hex 32`. |
 
 ## Fluxo de cadastro (`/api/cadastro`)
 
@@ -37,6 +38,22 @@ Veja `.env.example`. Nunca commitar valores reais.
 2. Salva o registro no Postgres via Prisma (`Registration`) — isso é garantido antes de qualquer chamada externa.
 3. Tenta sincronizar o contato com o ActiveCampaign: `POST /api/3/contact/sync` e aplica a tag de lead (criando-a se ainda não existir) via `POST /api/3/tags` + `POST /api/3/contactTags` — tudo isolado em `try/catch`.
 4. Se a sincronização falhar, o registro permanece salvo com `syncedToAC = false` (para reprocessamento manual/posterior) e a resposta ao usuário continua sendo de sucesso — o cadastro nunca é perdido por causa de uma indisponibilidade do CRM.
+
+## Listagem de inscritos (`GET /api/registrations`)
+
+Endpoint para o sistema interno consumir todos os cadastros (ex: montar uma página de confirmados). Retorna todos os registros da tabela `Registration`, mais recentes primeiro.
+
+Protegido por header `Authorization: Bearer <INTERNAL_API_KEY>` — sem o header correto retorna `401`. Nunca exponha essa chave no frontend/client-side; consuma este endpoint só a partir de outro servidor/sistema interno.
+
+```bash
+curl -H "Authorization: Bearer $INTERNAL_API_KEY" https://seu-dominio/api/registrations
+```
+
+Resposta:
+
+```json
+{ "registrations": [ { "id": "...", "nome": "...", "email": "...", "telefone": "...", "empresa": null, "cargo": null, "segmento": "...", "autorizo": true, "syncedToAC": true, "createdAt": "2026-08-15T19:00:00.000Z" } ] }
+```
 
 ## Deploy na Vercel
 
