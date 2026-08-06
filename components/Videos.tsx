@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 
 const VIDEO_IDS = [
-  "vu6z3hU2ZqE",
   "5OMOmApOSX4",
   "q9co2iNlA_c",
   "xFfn-aw1iq4",
@@ -11,7 +10,6 @@ const VIDEO_IDS = [
 
 const ACCENTS = [
   { border: "border-pink-border", corner: "border-pink", glow: "hover:shadow-[0_20px_60px_rgba(147,65,236,0.2)]" },
-  { border: "border-gold-border", corner: "border-gold", glow: "hover:shadow-[0_20px_60px_rgba(212,175,55,0.12)]" },
   { border: "border-gold-border", corner: "border-gold", glow: "hover:shadow-[0_20px_60px_rgba(212,175,55,0.12)]" },
   { border: "border-pink-border", corner: "border-pink", glow: "hover:shadow-[0_20px_60px_rgba(147,65,236,0.2)]" },
 ] as const;
@@ -131,7 +129,7 @@ export function Videos() {
       />
 
       <div className="relative max-w-content mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
           {VIDEO_IDS.map((id, i) => (
             <VideoFrame key={id} id={id} accent={ACCENTS[i]} />
           ))}
