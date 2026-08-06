@@ -93,7 +93,7 @@ function VideoFrame({
         {active ? (
           <iframe
             src={embedSrc(id)}
-            title="IPDCON"
+            title="Treinamento All Party"
             className="absolute inset-0 h-full w-full border-0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen={false}
