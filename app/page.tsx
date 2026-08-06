@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { SobreEvento } from "@/components/SobreEvento";
 import { Estrutura } from "@/components/Estrutura";
+import { Videos } from "@/components/Videos";
 import { Lancamento } from "@/components/Lancamento";
 import { Servicos } from "@/components/Servicos";
 import { Local } from "@/components/Local";
@@ -51,6 +52,7 @@ export default function Home() {
         <Hero />
         <SobreEvento />
         <Estrutura />
+        <Videos />
         <Lancamento />
         <Servicos />
         <Local />
