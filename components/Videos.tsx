@@ -95,11 +95,12 @@ function VideoFrame({
         {active ? (
           <iframe
             src={embedSrc(id)}
-            title=""
+            title="IPDCON"
             className="absolute inset-0 h-full w-full border-0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen={false}
             loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
           />
         ) : (
           <div className="absolute inset-0 bg-card" aria-hidden="true" />
