@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { SobreEvento } from "@/components/SobreEvento";
+import { VideoDestaque } from "@/components/VideoDestaque";
 import { Estrutura } from "@/components/Estrutura";
 import { Videos } from "@/components/Videos";
 import { Lancamento } from "@/components/Lancamento";
@@ -51,6 +52,7 @@ export default function Home() {
       <main>
         <Hero />
         <SobreEvento />
+        <VideoDestaque />
         <Estrutura />
         <Videos />
         <Lancamento />
