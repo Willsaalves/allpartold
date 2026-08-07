@@ -3,7 +3,7 @@ import { MonoLabel } from "./MonoLabel";
 
 const BRANDS = ["All Party", "Treme Terra", "AP7"];
 const SOCIALS = [
-  { Icon: IconInstagram, label: "Instagram", href: "https://www.instagram.com/grupoallparty" },
+  { Icon: IconInstagram, label: "Instagram", href: "https://www.instagram.com/allpartycorporate" },
   { Icon: IconLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/allpartyeventos" },
   { Icon: IconYoutube, label: "YouTube", href: "https://www.youtube.com/@allpartyeventos" },
 ];
