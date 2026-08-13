@@ -5,7 +5,7 @@ import { MonoLabel } from "./MonoLabel";
 const DETAILS = [
   ["data", "15 de agosto de 2026, 19h"],
   ["capacidade", "500+ convidados"],
-  ["estacionamento", "500 vagas próprias"],
+  ["estacionamento", "500 vagas próprias — R$ 50"],
   ["formato", "Presencial / 1 dia"],
 ];
 

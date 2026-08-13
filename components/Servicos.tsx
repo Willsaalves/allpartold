@@ -15,7 +15,7 @@ const ITEMS = [
   {
     icon: IconParking,
     title: "Estacionamento Próprio",
-    desc: "500 vagas cobertas e gratuitas para todos os participantes",
+    desc: "500 vagas cobertas disponíveis por R$ 50 para todos os participantes",
   },
 ];
 
