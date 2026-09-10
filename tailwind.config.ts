@@ -5,38 +5,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pink: {
-          DEFAULT: "#9341ec",
-          dim: "rgba(147,65,236,0.18)",
-          border: "rgba(147,65,236,0.35)",
+        accent: "#3C0079",
+        corporate: {
+          dark: "#220048",
+          deepest: "#12002A",
         },
-        purple: {
-          DEFAULT: "#6d04d7",
-          dim: "rgba(109,4,215,0.15)",
-        },
-        gold: {
-          DEFAULT: "#d4af37",
-          dim: "rgba(212,175,55,0.12)",
-          border: "rgba(212,175,55,0.3)",
-        },
-        bg: "#080810",
-        surface: "#0d0d18",
-        card: {
-          DEFAULT: "#10101e",
-          border: "rgba(147,65,236,0.15)",
-        },
-        gray: {
-          DEFAULT: "#b0b0c8",
-        },
-        muted: "#60607a",
+        ink: "hsl(270 42% 11%)",
+        canvas: "hsl(268 48% 97%)",
+        tint: "hsl(268 42% 94%)",
+        mist: "hsl(268 22% 78%)",
+        chip: "hsl(270 85% 85%)",
       },
       fontFamily: {
-        montserrat: ["var(--font-montserrat)", "sans-serif"],
-        inter: ["var(--font-inter)", "sans-serif"],
-        mono: ["var(--font-jetbrains-mono)", "monospace"],
+        display: ["var(--font-anton)", "sans-serif"],
+        heading: ["var(--font-montserrat)", "sans-serif"],
       },
       maxWidth: {
-        content: "1200px",
+        container: "1180px",
       },
     },
   },

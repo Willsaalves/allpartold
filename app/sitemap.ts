@@ -7,8 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: siteUrl,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 1,
+    },
+    {
+      url: `${siteUrl}/ipdcon-2026`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.8,
     },
   ];
 }
