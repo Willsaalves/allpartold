@@ -37,6 +37,7 @@ export function Carrossel({ fotos, titulo }: { fotos: Foto[]; titulo: string }) 
               sizes="(min-width: 860px) 760px, 82vw"
               className="object-cover"
             />
+            {foto.legenda && <figcaption className="carousel-caption">{foto.legenda}</figcaption>}
           </figure>
         ))}
       </div>

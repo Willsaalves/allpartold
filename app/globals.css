@@ -745,6 +745,17 @@ td {
 .carousel-slide img {
   object-fit: cover;
 }
+.carousel-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  padding: 2.6rem 1.4rem 1.2rem;
+  background: linear-gradient(to top, rgba(8, 0, 18, 0.88), transparent);
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
 .carousel-controls {
   display: flex;
   gap: 0.6rem;
