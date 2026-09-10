@@ -1,38 +1,52 @@
 const EDICOES = [
   {
-    index: "01 · 2023",
+    ano: "2023",
     titulo: "1ª edição",
-    texto: "O IPDCON nasce como evento anual do Grupo All Party.",
+    texto:
+      "O IPDCON nasce como evento anual do Grupo All Party, criado para valorizar e celebrar os parceiros da empresa.",
   },
   {
-    index: "02 · 2024",
+    ano: "2024",
     titulo: "2ª edição",
-    texto: "Consolidação como vitrine das soluções do grupo.",
+    texto:
+      "O evento se consolida como vitrine das soluções do grupo e marco no calendário de relacionamento com parceiros.",
   },
   {
-    index: "03 · 2025",
+    ano: "2025",
     titulo: "3ª edição",
-    texto: "Mais de 200 profissionais da área educacional reunidos em São Paulo.",
+    texto:
+      "Realizada em 2 de agosto, em São Paulo, reuniu mais de 200 profissionais da área educacional — diretores, gestores e professores do Ensino Fundamental II e Médio — e celebrou os 14 anos de atuação do Grupo All Party. Tornou-se um marco na valorização da profissão docente.",
   },
   {
-    index: "04 · 2026",
+    ano: "2026",
     titulo: "4ª edição",
-    texto: "Mais de 320 lideranças reunidas em São Paulo.",
+    texto:
+      "Realizada em 15 de agosto, em São Paulo, reuniu mais de 320 lideranças — executivos, gestores de Marketing, Recursos Humanos, Comunicação, Eventos e Procurement. Apresentou o ecossistema completo em um só palco: All Party Formatura, All Party Corporate, Treme Terra Audiovisual e AP7 Photo.",
   },
 ];
 
 export function Trajetoria() {
   return (
-    <section className="section band-tint" id="trajetoria">
+    <section className="section band-light" id="trajetoria">
       <div className="container">
-        <div className="eyebrow">Retrospectiva histórica</div>
-        <h2 className="h2">Quatro edições. Uma trajetória em construção.</h2>
-        <div className="process-grid">
-          {EDICOES.map(({ index, titulo, texto }) => (
-            <article className="step" key={index}>
-              <div className="step-index">{index}</div>
-              <h3 className="h3">{titulo}</h3>
-              <p>{texto}</p>
+        <div className="section-head">
+          <div className="eyebrow">Retrospectiva histórica</div>
+          <h2 className="h2">Conheça a trajetória</h2>
+          <p className="lead">
+            O coração do IPDCON: a história das quatro edições que consolidaram o evento como marco
+            do ecossistema.
+          </p>
+        </div>
+
+        <div className="timeline">
+          {EDICOES.map(({ ano, titulo, texto }) => (
+            <article className="timeline-item" key={ano}>
+              <div className="timeline-dot" aria-hidden="true" />
+              <div className="timeline-card">
+                <span className="timeline-year">{ano}</span>
+                <h3 className="h3">{titulo}</h3>
+                <p>{texto}</p>
+              </div>
             </article>
           ))}
         </div>

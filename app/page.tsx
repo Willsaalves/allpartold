@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import { Nav, type NavLink } from "@/components/ipdcon/Nav";
 import { HeroHome } from "@/components/ipdcon/HeroHome";
-import { GalleryStrip } from "@/components/ipdcon/GalleryStrip";
-import { Statement } from "@/components/ipdcon/Statement";
 import { Showcase } from "@/components/ipdcon/Showcase";
+import { Idealizador } from "@/components/ipdcon/Idealizador";
 import { Objetivos } from "@/components/ipdcon/Objetivos";
 import { Ecossistema } from "@/components/ipdcon/Ecossistema";
-import { Ticker } from "@/components/ipdcon/Ticker";
-import { Diferenciais } from "@/components/ipdcon/Diferenciais";
-import { Videos } from "@/components/ipdcon/Videos";
 import { Trajetoria } from "@/components/ipdcon/Trajetoria";
 import { CaseEdicao } from "@/components/ipdcon/CaseEdicao";
+import { GaleriaHome } from "@/components/ipdcon/GaleriaHome";
+import { SobreGrupo } from "@/components/ipdcon/SobreGrupo";
 import { CtaFinal } from "@/components/ipdcon/CtaFinal";
 import { SiteFooter } from "@/components/ipdcon/SiteFooter";
-import { FOTOS_2026 } from "@/lib/media";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ipdcon.allparty.com.br";
 
@@ -24,10 +21,10 @@ export const metadata: Metadata = {
 };
 
 const NAV_LINKS: NavLink[] = [
-  { label: "Conceito", href: "#conceito" },
+  { label: "O que é", href: "#conceito" },
+  { label: "Para que serve", href: "#objetivos" },
   { label: "Ecossistema", href: "#ecossistema" },
-  { label: "Trajetória", href: "#trajetoria" },
-  { label: "4ª edição", href: "#edicao" },
+  { label: "Edições", href: "#trajetoria" },
   { label: "Sobre", href: "#sobre" },
 ];
 
@@ -56,26 +53,14 @@ export default function Home() {
 
       <main id="top">
         <HeroHome />
-        <GalleryStrip fotos={FOTOS_2026} />
-        <Statement />
         <Showcase />
+        <Idealizador />
         <Objetivos />
         <Ecossistema />
-        <Ticker
-          items={[
-            "Experiência",
-            "Networking",
-            "Corporate",
-            "Relacionamento",
-            "Inovação",
-            "Negócios",
-          ]}
-        />
-        <Diferenciais />
-        <Videos />
         <Trajetoria />
-        <Ticker items={["2023", "2024", "2025", "2026", "IPDCON", "Grupo All Party"]} />
         <CaseEdicao />
+        <GaleriaHome />
+        <SobreGrupo />
         <CtaFinal />
       </main>
 

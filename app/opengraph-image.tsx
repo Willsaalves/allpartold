@@ -35,7 +35,7 @@ export default async function OgImage() {
           Evento proprietário · Grupo All Party
         </div>
         <div style={{ display: "flex", fontSize: 150, fontWeight: 800, color: "#fff" }}>
-          IPD<span style={{ color: "#D6B3FF" }}>CON</span>
+          IPDCON
         </div>
         <div
           style={{

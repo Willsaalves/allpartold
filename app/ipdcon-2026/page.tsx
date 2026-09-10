@@ -35,7 +35,7 @@ const NAV_LINKS: NavLink[] = [
   { label: "Números", href: "#numeros" },
   { label: "Galeria", href: "#galeria" },
   { label: "O IPDCON", href: "/" },
-  { label: "Sobre", href: "#sobre" },
+  { label: "Sobre", href: "/#sobre" },
 ];
 
 const eventJsonLd = {

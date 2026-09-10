@@ -33,9 +33,9 @@ export function MateriaCaio() {
               <Image
                 src={FOTO_CAIO.src}
                 alt={FOTO_CAIO.alt}
-                fill
+                width={800}
+                height={1200}
                 sizes="(min-width: 860px) 38vw, 100vw"
-                className="object-cover"
               />
             </div>
             <p className="materia-caption">

@@ -2,7 +2,7 @@ export function CtaFinal() {
   return (
     <section className="section cta-final" id="orcamento">
       <div className="container">
-        <div className="eyebrow">Grupo All Party</div>
+        <div className="eyebrow">Próximos passos</div>
         <h2 className="h2">Viva essa experiência.</h2>
         <p>
           Quer saber como o Grupo All Party pode transformar o seu próximo evento em uma

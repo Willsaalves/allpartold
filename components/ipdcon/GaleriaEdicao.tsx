@@ -1,4 +1,4 @@
-import { Carrossel } from "./Carrossel";
+import { GaleriaFotos } from "./GaleriaFotos";
 import { FOTOS_2026 } from "@/lib/media";
 
 export function GaleriaEdicao() {
@@ -10,7 +10,7 @@ export function GaleriaEdicao() {
         <p className="lead">
           Da recepção ao palco principal: os momentos que traduzem a experiência da quarta edição.
         </p>
-        <Carrossel fotos={FOTOS_2026} titulo="Galeria do IPDCON 2026" />
+        <GaleriaFotos fotos={FOTOS_2026} titulo="Galeria do IPDCON 2026" />
       </div>
     </section>
   );
