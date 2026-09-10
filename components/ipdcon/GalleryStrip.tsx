@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Imagem } from "./Imagem";
 import type { Foto } from "@/lib/media";
 
 /**
@@ -13,7 +13,7 @@ export function GalleryStrip({ fotos }: { fotos: Foto[] }) {
       <div className="gallery-track">
         {track.map((foto, i) => (
           <div className="gallery-card" key={`${foto.src}-${i}`}>
-            <Image
+            <Imagem
               src={foto.src}
               alt={i < fotos.length ? foto.alt : ""}
               aria-hidden={i >= fotos.length}

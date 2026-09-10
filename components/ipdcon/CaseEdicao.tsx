@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Imagem } from "./Imagem";
 import Link from "next/link";
 import { FOTO_CASE } from "@/lib/media";
 import { Ticker } from "./Ticker";
@@ -17,7 +17,7 @@ export function CaseEdicao() {
         <h2 className="h2">O que aconteceu na 4ª edição.</h2>
         <div className="case-layout">
           <div className="case-card case-card--photo">
-            <Image
+            <Imagem
               src={FOTO_CASE.src}
               alt=""
               aria-hidden="true"

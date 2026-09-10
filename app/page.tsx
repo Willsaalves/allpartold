@@ -27,7 +27,7 @@ const NAV_LINKS: NavLink[] = [
   { label: "Conceito", href: "#conceito" },
   { label: "Ecossistema", href: "#ecossistema" },
   { label: "Trajetória", href: "#trajetoria" },
-  { label: "4ª edição", href: "#edicao" },
+  { label: "4ª edição", href: "/ipdcon-2026" },
   { label: "Sobre", href: "#sobre" },
 ];
 

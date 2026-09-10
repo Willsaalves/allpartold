@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Imagem } from "./Imagem";
 import Link from "next/link";
 import { FOTO_HERO_2026 } from "@/lib/media";
 
@@ -6,7 +6,7 @@ export function HeroEdicao() {
   return (
     <section className="hero band-dark">
       <div className="hero-photo">
-        <Image
+        <Imagem
           src={FOTO_HERO_2026.src}
           alt=""
           aria-hidden="true"

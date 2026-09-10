@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Imagem } from "./Imagem";
 import { FOTO_CAIO } from "@/lib/media";
 
 /**
@@ -30,7 +30,7 @@ export function MateriaCaio() {
         <div className="materia-grid">
           <div>
             <div className="materia-portrait">
-              <Image
+              <Imagem
                 src={FOTO_CAIO.src}
                 alt={FOTO_CAIO.alt}
                 fill

@@ -1,11 +1,12 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Imagem } from "./Imagem";
 import { FOTO_HERO_HOME } from "@/lib/media";
 
 export function HeroHome() {
   return (
     <section className="hero band-dark">
       <div className="hero-photo">
-        <Image
+        <Imagem
           src={FOTO_HERO_HOME.src}
           alt=""
           aria-hidden="true"
@@ -24,11 +25,11 @@ export function HeroHome() {
           transforma encontros corporativos em momentos memoráveis.
         </p>
         <div className="actions">
-          <a className="btn" href="#trajetoria">
+          <Link className="btn" href="/ipdcon-2026">
+            Veja como foi a 4ª edição
+          </Link>
+          <a className="btn btn--ghost" href="#trajetoria">
             Conheça a trajetória
-          </a>
-          <a className="btn btn--ghost" href="#orcamento">
-            Fale com a All Party
           </a>
         </div>
       </div>

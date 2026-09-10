@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Imagem } from "./Imagem";
 import { useState } from "react";
 import { VIDEOS, embed, thumb } from "@/lib/videos";
 
@@ -36,7 +36,7 @@ export function Videos() {
                 onClick={() => setTocando(id)}
                 aria-label={`Reproduzir vídeo: ${titulo}`}
               >
-                <Image
+                <Imagem
                   src={thumb(id)}
                   alt=""
                   aria-hidden="true"

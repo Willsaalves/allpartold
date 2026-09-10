@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Imagem } from "./Imagem";
 import { useCallback, useRef } from "react";
 import type { Foto } from "@/lib/media";
 
@@ -30,7 +30,7 @@ export function Carrossel({ fotos, titulo }: { fotos: Foto[]; titulo: string }) 
       >
         {fotos.map((foto) => (
           <figure className="carousel-slide" key={foto.src}>
-            <Image
+            <Imagem
               src={foto.src}
               alt={foto.alt}
               fill

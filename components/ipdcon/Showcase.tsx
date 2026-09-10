@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Imagem } from "./Imagem";
 import { FOTO_SHOWCASE } from "@/lib/media";
 
 const CHIPS = [
@@ -32,7 +32,7 @@ export function Showcase() {
           </div>
         </div>
         <div className="showcase-visual showcase-visual--photo">
-          <Image
+          <Imagem
             src={FOTO_SHOWCASE.src}
             alt={FOTO_SHOWCASE.alt}
             fill
