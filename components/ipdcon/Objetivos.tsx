@@ -43,7 +43,7 @@ export function Objetivos() {
       <div className="container">
         <div className="section-head">
           <div className="eyebrow">Objetivos estratégicos</div>
-          <h2 className="h2">Para que serve</h2>
+          <h2 className="h2">Sua finalidade</h2>
           <p className="lead">
             Mais do que uma celebração, o IPDCON cumpre papéis claros no fortalecimento do
             ecossistema e na geração de novas oportunidades corporativas.

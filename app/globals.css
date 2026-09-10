@@ -311,7 +311,7 @@ p {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: rgba(60, 0, 121, 0.35);
-  color: var(--chip-on-dark);
+  color: #fff;
   font: 600 0.8125rem / 1.1 var(--font-heading);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -320,8 +320,8 @@ p {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--chip-on-dark);
-  box-shadow: 0 0 8px var(--chip-on-dark);
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.45);
 }
 .actions {
   display: flex;
@@ -347,7 +347,7 @@ p {
   width: 340px;
   height: 240px;
   flex: none;
-  border-radius: 18px;
+  border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(135deg, #d7cee5, #f4f0f9);
   border: 1px solid var(--line-light);
@@ -747,7 +747,7 @@ td {
   margin-top: 3rem;
 }
 .materia-portrait {
-  border-radius: var(--radius);
+  border-radius: 12px;
   overflow: hidden;
   line-height: 0;
   background: linear-gradient(140deg, #220048, #0b0017);
@@ -796,7 +796,7 @@ td {
   flex: none;
   width: min(760px, 82vw);
   aspect-ratio: 3 / 2;
-  border-radius: var(--radius);
+  border-radius: 12px;
   overflow: hidden;
   scroll-snap-align: center;
   background: linear-gradient(135deg, #d7cee5, #f4f0f9);
@@ -945,43 +945,20 @@ td {
 }
 .founder-photo-col {
   position: relative;
-  display: flex;
-  justify-content: center;
   width: 100%;
   max-width: 350px;
-}
-.founder-glow {
-  position: absolute;
-  inset: -18px;
-  background: radial-gradient(circle, rgba(60, 0, 121, 0.28), transparent 70%);
-  filter: blur(28px);
-  pointer-events: none;
-}
-.founder-frame-offset {
-  position: absolute;
-  width: 100%;
-  max-width: 350px;
-  height: 100%;
-  border-radius: 26px;
-  top: 14px;
-  left: 14px;
-  background: linear-gradient(135deg, rgba(60, 0, 121, 0.35), rgba(34, 0, 72, 0.5));
-  border: 1px solid rgba(60, 0, 121, 0.35);
 }
 .founder-frame {
-  position: relative;
-  z-index: 2;
   width: 100%;
-  border-radius: 24px;
+  border-radius: 14px;
   padding: 3px;
   background: linear-gradient(135deg, var(--accent), var(--corporate-purple-dark));
   box-shadow: var(--shadow);
 }
 .founder-portrait {
-  border-radius: 21px;
+  border-radius: 12px;
   overflow: hidden;
   line-height: 0;
-  background: linear-gradient(140deg, #220048, #0b0017);
 }
 .founder-portrait img {
   display: block;
@@ -1202,7 +1179,7 @@ td {
   display: block;
   width: 100%;
   aspect-ratio: 3 / 2;
-  border-radius: var(--radius);
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line-light);
   background: linear-gradient(135deg, #d7cee5, #f4f0f9);
@@ -1260,7 +1237,7 @@ td {
   position: relative;
   max-width: 100%;
   max-height: 80vh;
-  border-radius: 18px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line-dark);
   background: #08000f;

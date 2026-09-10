@@ -12,8 +12,6 @@ export function Idealizador() {
 
         <div className="founder-wrap">
           <div className="founder-photo-col">
-            <div className="founder-glow" aria-hidden="true" />
-            <div className="founder-frame-offset" aria-hidden="true" />
             <div className="founder-frame">
               <div className="founder-portrait">
                 <Image

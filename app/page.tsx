@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const NAV_LINKS: NavLink[] = [
   { label: "O que é", href: "#conceito" },
-  { label: "Para que serve", href: "#objetivos" },
+  { label: "Sua finalidade", href: "#objetivos" },
   { label: "Ecossistema", href: "#ecossistema" },
   { label: "Edições", href: "#trajetoria" },
   { label: "Sobre", href: "#sobre" },
